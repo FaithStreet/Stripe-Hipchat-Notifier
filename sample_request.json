@@ -1,0 +1,56 @@
+{
+  "id": "evt_6GnCXd4ufeIIFX",
+  "created": 1432060720,
+  "livemode": false,
+  "type": "customer.created",
+  "data": {
+    "object": {
+      "object": "customer",
+      "created": 1432060720,
+      "id": "cus_6GnC86asfzW8yQ",
+      "livemode": false,
+      "description": null,
+      "email": "cathy+53@faithstreet.com",
+      "delinquent": false,
+      "metadata": {
+      },
+      "subscriptions": {
+        "object": "list",
+        "total_count": 0,
+        "has_more": false,
+        "url": "/v1/customers/cus_6GnC86asfzW8yQ/subscriptions",
+        "data": [
+
+        ]
+      },
+      "discount": null,
+      "account_balance": 0,
+      "currency": null,
+      "bank_accounts": {
+        "object": "list",
+        "total_count": 0,
+        "has_more": false,
+        "url": "/v1/customers/cus_6GnC86asfzW8yQ/bank_accounts",
+        "data": [
+
+        ]
+      },
+      "default_bank_account": null,
+      "default_source_type": null,
+      "sources": {
+        "object": "list",
+        "total_count": 0,
+        "has_more": false,
+        "url": "/v1/customers/cus_6GnC86asfzW8yQ/sources",
+        "data": [
+
+        ]
+      },
+      "default_source": null
+    }
+  },
+  "object": "event",
+  "pending_webhooks": 0,
+  "request": "iar_6GnCNp9Z2ydVlq",
+  "api_version": "2015-04-07"
+}

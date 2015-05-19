@@ -1,0 +1,12 @@
+{
+  "name": "Stripe HipChat Notifier",
+  "description": "A simple service to forward Stripe events to HipChat",
+  "keywords": [
+    "stripe",
+    "hipchat",
+    "sinatra"
+  ],
+  "addons": [],
+  "env": {},
+  "repository": "https://github.com/faithstreet/stripe-hipchat-notifier"
+}
