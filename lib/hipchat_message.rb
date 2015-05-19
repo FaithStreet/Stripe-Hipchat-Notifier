@@ -1,12 +1,14 @@
 class HipchatMessage
   attr_accessor :type
-  attr_accessor :uri
+  attr_accessor :id
   attr_accessor :amount
+  attr_accessor :resource
 
   def initialize attributes={}
-    self.type = attributes[:type]
-    self.uri = attributes[:uri]
-    self.amount = attributes[:amount]
+    @type = attributes[:type]
+    @id = attributes[:id]
+    @amount = attributes[:amount]
+    @resource = attributes[:resource]
   end
 
   def self.new_from_request(request_body)
@@ -15,18 +17,19 @@ class HipchatMessage
     attributes = {
       type: request["type"],
       id: resource['id'],
-      amount: resource['amount']
+      amount: resource['amount'],
+      resource: resource
     }
 
     self.new attributes
   end
 
   def to_h
-    {text:"#{type} - #{amount} - #{uri}", notify:should_notify?, color:set_color}
+    {text:"#{type} - #{amount} - #{id} : #{resource.reject {|k,v| !v.is_a?(String) || k == 'object' || k == 'id'}}", notify:should_notify?, color:set_color}
   end
 
   def valid?
-    type !=nil && uri != nil
+    type !=nil && id != nil
   end
 
   def should_notify?
@@ -66,10 +69,4 @@ class HipchatMessage
       'gray'
     end
   end
-
-private
-
-  def build_from_request(request_body)
-  end
-
 end
