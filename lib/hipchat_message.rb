@@ -1,4 +1,3 @@
-require 'pry'
 class HipchatMessage
   attr_accessor :type
   attr_accessor :uri
